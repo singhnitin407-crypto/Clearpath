@@ -1,0 +1,33 @@
+<!-- @dsCard group="Components" viewport="700x430" name="Metrics & bar chart" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css"></head>
+<body style="margin:0;background:var(--cp-bg-page)"><div id="root"></div>
+<script type="text/x-cp">
+const Frame = ({ children, dir = 'ltr', cap }) => (
+  <div dir={dir} style={{ width: '322px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+    {cap && <span dir="ltr" style={{ fontSize: '11px', color: 'var(--cp-text-secondary)' }}>{cap}</span>}
+    {children}
+  </div>
+);
+function Demo() {
+  const [seg, setSeg] = React.useState('a');
+  const [nav, setNav] = React.useState('home');
+  return (
+  <div style={{ display: 'flex', gap: '16px', padding: '16px', alignItems: 'flex-start' }}>
+
+    <Frame cap="MetricTrend two-up">
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+        <MetricTrend label="Paid so far" value={133200} currency="AED" data={[14800,14800,14800,14800,14800,14800,14800,14800,14800]} delta="14,800" trend="up" sentiment="good" />
+        <MetricTrend label="On-time" value="8 of 9" delta="1 overdue" trend="down" sentiment="bad" />
+      </div>
+      <div dir="rtl"><MetricTrend label="الرصيد" value={133200} currency="AED" chart="line" data={[251600,236800,222000,207200,192400,177600,162800,148000,133200]} delta="-14,800 هذا الشهر" trend="down" sentiment="good" /></div>
+    </Frame>
+    <Frame cap="BarChart — tap a bar">
+      <BarChart title="Balance over time" value={133200} valueCurrency="AED" caption="Down AED 133,200 since March" data={['Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov'].map((m, i) => ({ label: m, value: 251600 - i * 14800 }))} formatValue={(v) => (v / 1000).toFixed(1) + 'k'} height={140} />
+      <BarChart tone="dark" title="Repaid per month" data={['Sep','Oct','Nov','Dec'].map((m, i) => ({ label: m, value: [14800, 14800, 29600, 0][i] }))} highlightIndex={2} height={110} />
+    </Frame>
+  </div>);
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+<script src="../../components/_preview.js"></script>
+</body></html>

@@ -1,0 +1,94 @@
+:root {
+  /* Primitives */
+  --cp-neutral-0: #ffffff;
+  --cp-neutral-25: #f9f8f5;
+  --cp-neutral-50: #f3f3ef;
+  --cp-neutral-100: #ebebe6;
+  --cp-neutral-200: #dedfd9;
+  --cp-neutral-400: #a2a5ab;
+  --cp-neutral-600: #62666f;
+  --cp-neutral-800: #2a2d34;
+  --cp-neutral-900: #16181d;
+  --cp-sand-100: #efe8dc;
+  --cp-teal-50: #e5f3f0;
+  --cp-teal-300: #7fd8c6;
+  --cp-teal-400: #4cc3ad;
+  --cp-teal-600: #147a6e;
+  --cp-teal-800: #0f4a44;
+  --cp-teal-900: #0a332f;
+  --cp-green-50: #e4f4e9;
+  --cp-green-600: #17803f;
+  --cp-red-50: #fdecea;
+  --cp-red-600: #c4372d;
+  --cp-red-800: #8a2620;
+  --cp-amber-50: #fff3e0;
+  --cp-amber-300: #ffd08a;
+  --cp-amber-800: #7a4300;
+
+  /* Semantic — surfaces */
+  --cp-bg-page: var(--cp-neutral-50);
+  --cp-bg-page-tint: var(--cp-sand-100);
+  --cp-bg-surface: var(--cp-neutral-0);
+  --cp-bg-sunken: var(--cp-neutral-100);
+  --cp-bg-inverse: var(--cp-neutral-900);
+  --cp-bg-hero: var(--cp-teal-800);
+  --cp-bg-hero-deep: var(--cp-teal-900);
+  --cp-bg-glass: rgba(255, 255, 255, 0.12);
+
+  /* Text */
+  --cp-text-primary: var(--cp-neutral-900);
+  --cp-text-secondary: var(--cp-neutral-600);
+  --cp-text-on-dark: #ffffff;
+  --cp-text-on-dark-muted: rgba(255, 255, 255, 0.74);
+  --cp-text-link: var(--cp-teal-600);
+  --cp-text-link-hover: var(--cp-teal-800);
+  --cp-border-subtle: var(--cp-neutral-200);
+
+  /* Actions */
+  --cp-action-primary: var(--cp-neutral-900);
+  --cp-action-primary-hover: var(--cp-neutral-800);
+  --cp-action-primary-text: #ffffff;
+  --cp-action-soft: var(--cp-neutral-100);
+  --cp-action-soft-hover: var(--cp-neutral-200);
+  --cp-action-accent: var(--cp-teal-300);
+  --cp-action-accent-text: var(--cp-teal-900);
+
+  /* Money */
+  --cp-money-saving: var(--cp-teal-600);
+  --cp-money-in: var(--cp-green-600);
+  --cp-money-out: var(--cp-red-600);
+
+  /* Status */
+  --cp-status-paid: var(--cp-green-600);
+  --cp-status-overdue: var(--cp-red-600);
+  --cp-status-upcoming: var(--cp-neutral-600);
+  --cp-status-upcoming-bg: var(--cp-neutral-100);
+
+  /* Alerts */
+  --cp-alert-info-bg: var(--cp-neutral-0);
+  --cp-alert-info-icon-bg: var(--cp-teal-50);
+  --cp-alert-info-icon: var(--cp-teal-600);
+  --cp-alert-warning-bg: var(--cp-amber-50);
+  --cp-alert-warning-icon-bg: var(--cp-amber-300);
+  --cp-alert-warning-icon: var(--cp-amber-800);
+  /* Urgent strip: soft red tint, solid red icon disc, ink title, deep-red body */
+  --cp-alert-action-bg: var(--cp-red-50);
+  --cp-alert-action-text: var(--cp-neutral-900);
+  --cp-alert-action-body: var(--cp-red-800);
+  --cp-alert-action-icon-bg: var(--cp-red-600);
+  --cp-alert-action-icon: #ffffff;
+
+  /* Charts + trend */
+  --cp-chart-bar: var(--cp-neutral-100);
+  --cp-chart-bar-on-dark: rgba(255, 255, 255, 0.14);
+  --cp-chart-highlight: var(--cp-teal-600);
+  --cp-chart-highlight-on-dark: var(--cp-teal-300);
+  --cp-trend-good: var(--cp-green-600);
+  --cp-trend-good-bg: var(--cp-green-50);
+  --cp-trend-bad: var(--cp-red-600);
+  --cp-trend-bad-bg: var(--cp-red-50);
+  --cp-trend-neutral: var(--cp-neutral-600);
+  --cp-trend-neutral-bg: var(--cp-neutral-100);
+
+  --cp-focus-ring: var(--cp-teal-600);
+}

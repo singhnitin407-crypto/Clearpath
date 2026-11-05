@@ -1,0 +1,27 @@
+<!-- @dsCard group="Components" viewport="700x460" name="Empty state" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css"></head>
+<body style="margin:0;background:var(--cp-bg-page)"><div id="root"></div>
+<script type="text/x-cp">
+const Frame = ({ children, dir = 'ltr', cap }) => (
+  <div dir={dir} style={{ width: '322px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+    {cap && <span dir="ltr" style={{ fontSize: '11px', color: 'var(--cp-text-secondary)' }}>{cap}</span>}
+    {children}
+  </div>
+);
+function Demo() {
+  const [seg, setSeg] = React.useState('a');
+  const [nav, setNav] = React.useState('home');
+  return (
+  <div style={{ display: 'flex', gap: '16px', padding: '16px', alignItems: 'flex-start' }}>
+
+    <Frame cap="card · with action"><EmptyState icon="receipt-text" title="No payments yet" actionLabel="View schedule">Your first instalment is due on 9 December. Payments will appear here.</EmptyState></Frame>
+    <Frame cap="compact · inside a sheet">
+      <div style={{ background: '#fff', borderRadius: '24px', padding: '8px 16px 16px' }}><EmptyState compact icon="landmark" title="No bank account linked" actionLabel="Link bank account" actionIcon="plus" secondaryLabel="Pay by bank transfer instead">Link an account to pay instantly from the app.</EmptyState></div>
+      <div style={{ background: '#fff', borderRadius: '24px', padding: '8px 16px 16px' }}><EmptyState compact tone="neutral" icon="bell-off" title="You're all caught up">Payment reminders and offers will show up here.</EmptyState></div>
+    </Frame>
+  </div>);
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+<script src="../../components/_preview.js"></script>
+</body></html>

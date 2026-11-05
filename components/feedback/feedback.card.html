@@ -1,0 +1,50 @@
+<!-- @dsCard group="Components" viewport="700x760" name="Alert banner" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css"></head>
+<body style="margin:0;background:var(--cp-bg-page)"><div id="root"></div>
+<script type="text/x-cp">
+const Frame = ({ children, dir = 'ltr', cap }) => (
+  <div dir={dir} style={{ width: '322px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+    {cap && <span dir="ltr" style={{ fontSize: '11px', color: 'var(--cp-text-secondary)' }}>{cap}</span>}
+    {children}
+  </div>
+);
+function Demo() {
+  const [seg, setSeg] = React.useState('a');
+  const [nav, setNav] = React.useState('home');
+  const [sheetOpen, setSheetOpen] = React.useState(false);
+  const [box, setBox] = React.useState(null);
+  return (
+  <div style={{ display: 'flex', gap: '16px', padding: '16px', alignItems: 'flex-start' }}>
+
+    <Frame cap="info · warning">
+      <AlertBanner variant="info" icon="sparkles" title="Settle early and save 2.1%" actionLabel="See your saving" onDismiss={() => {}}>We show the net saving, after any fee, before you confirm.</AlertBanner>
+      <AlertBanner variant="warning" title="Payment due in 3 days" onDismiss={() => {}}>AED 14,800 will be debited from ••4821 on 9 December.</AlertBanner>
+    </Frame>
+    <Frame cap="offer · coupon">
+      <AlertBanner variant="offer" badge="Limited offer · ends 30 Sept" highlightPrefix="Save" highlight="2.1%" title="Settle your loan early" actionLabel="See your saving" onDismiss={() => {}} saving={<React.Fragment><span>Net saving</span><Money amount={1465} size="sm" tone="saving" /><span>after 1% fee</span></React.Fragment>} />
+    </Frame>
+    <Frame cap="BottomSheet — tap to open">
+      <div ref={setBox} style={{ position: 'relative', height: '260px', borderRadius: '24px', overflow: 'hidden', background: 'var(--cp-bg-sunken)', display: 'flex', alignItems: 'flex-start', justifyContent: 'flex-end', padding: '12px' }}>
+        <IconButton icon="bell" label="Notifications" badgeCount={1} onClick={() => setSheetOpen(true)} />
+        <BottomSheet open={sheetOpen} onClose={() => setSheetOpen(false)} container={box} title="New offer">
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}><strong style={{ fontSize: '18px' }}>You\'ve received a 2.1% off offer</strong><span style={{ fontSize: '13.5px', color: 'var(--cp-text-secondary)' }}>Pay before 30 September.</span><Button fullWidth onClick={() => setSheetOpen(false)}>See your saving</Button></div>
+        </BottomSheet>
+      </div>
+    </Frame>
+    <Frame cap="NotificationItem">
+      <div style={{ background: '#fff', borderRadius: '24px', padding: '6px' }}>
+        <NotificationItem tone="offer" icon="badge-percent" title="You\'ve received a 2.1% off offer" body="Pay before 30 September and save 2.1%." time="Today, 9:41" unread />
+        <NotificationItem tone="info" icon="calendar" title="Next payment on 9 December" body="AED 14,800 will be debited from ••4821." time="Yesterday" unread />
+        <NotificationItem tone="success" icon="circle-check" title="Payment received" body="We received AED 14,800 for instalment 9." time="9 Nov" />
+      </div>
+    </Frame>
+    <Frame cap="action required · RTL">
+      <AlertBanner variant="action" title="Your 9 November instalment is overdue" actionLabel="Pay AED 14,800">Late fee is capped at AED 200.</AlertBanner>
+      <div dir="rtl"><AlertBanner variant="info" icon="sparkles" title="سدّد مبكرًا ووفّر 2.1%" onDismiss={() => {}} dismissLabel="إغلاق">نعرض لك صافي التوفير بعد أي رسوم قبل التأكيد.</AlertBanner></div>
+    </Frame>
+  </div>);
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+<script src="../../components/_preview.js"></script>
+</body></html>

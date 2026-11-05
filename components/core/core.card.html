@@ -1,0 +1,32 @@
+<!-- @dsCard group="Components" viewport="700x290" name="Buttons, icons & money" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css"></head>
+<body style="margin:0;background:var(--cp-bg-page)"><div id="root"></div>
+<script type="text/x-cp">
+const Frame = ({ children, dir = 'ltr', cap }) => (
+  <div dir={dir} style={{ width: '322px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+    {cap && <span dir="ltr" style={{ fontSize: '11px', color: 'var(--cp-text-secondary)' }}>{cap}</span>}
+    {children}
+  </div>
+);
+function Demo() {
+  const [seg, setSeg] = React.useState('a');
+  const [nav, setNav] = React.useState('home');
+  return (
+  <div style={{ display: 'flex', gap: '16px', padding: '16px', alignItems: 'flex-start' }}>
+
+    <Frame cap="Button">
+      <Button fullWidth>Confirm payment</Button>
+      <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}><Button variant="soft" size="sm">See all 18</Button><Button variant="ghost" size="sm">Details</Button><Button size="sm" disabled>Disabled</Button></div>
+      <div style={{ background: 'var(--cp-bg-hero)', padding: '12px', borderRadius: '18px', display: 'flex', gap: '8px' }}><Button variant="accent" size="sm" iconEnd="arrow-right">Pay now</Button><Button variant="inverse" size="sm">Later</Button></div>
+    </Frame>
+    <Frame cap="IconButton · Money">
+      <div style={{ display: 'flex', gap: '8px' }}><IconButton icon="bell" label="Notifications" badge /><IconButton icon="circle-help" label="Help" variant="soft" /><IconButton icon="plus" label="Add" variant="inverse" /></div>
+      <Money amount={133200} size="hero" />
+      <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}><Money amount={14800} size="lg" /><Money amount={400} sign="+" tone="in" /><Money amount={783} sign="−" tone="out" /></div>
+    </Frame>
+  </div>);
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+<script src="../../components/_preview.js"></script>
+</body></html>

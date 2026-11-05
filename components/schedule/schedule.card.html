@@ -1,0 +1,35 @@
+<!-- @dsCard group="Components" viewport="700x700" name="Schedule row & status chip" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css"></head>
+<body style="margin:0;background:var(--cp-bg-page)"><div id="root"></div>
+<script type="text/x-cp">
+const Frame = ({ children, dir = 'ltr', cap }) => (
+  <div dir={dir} style={{ width: '322px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
+    {cap && <span dir="ltr" style={{ fontSize: '11px', color: 'var(--cp-text-secondary)' }}>{cap}</span>}
+    {children}
+  </div>
+);
+function Demo() {
+  const [seg, setSeg] = React.useState('a');
+  const [nav, setNav] = React.useState('home');
+  return (
+  <div style={{ display: 'flex', gap: '16px', padding: '16px', alignItems: 'flex-start' }}>
+
+    <Frame cap="PaymentScheduleRow">
+      <PaymentScheduleRow day="9" month="Oct" title="Instalment 8 of 18" detail="Paid 9 Oct" amount={14800} status="paid" />
+      <PaymentScheduleRow day="9" month="Nov" title="Instalment 9 of 18" detail="Late fee capped at AED 200" amount={14800} status="overdue" current />
+      <PaymentScheduleRow day="9" month="Dec" title="Instalment 10 of 18" detail="Auto-debit from ••4821" amount={14800} status="upcoming" />
+    </Frame>
+    <Frame cap="InstalmentTimeline">
+      <InstalmentTimeline title="Instalment history" summary="8 of 18 paid · AED 118,400" statusLabels={{ paid: 'Paid', overdue: 'Overdue' }} items={[{ id: 9, title: 'Instalment 9', meta: 'Due 9 Nov · Late fee capped at AED 200', amount: 14800, status: 'overdue' }, { id: 8, title: 'Instalment 8', meta: 'Paid 9 Oct · ••4821', amount: 14800, status: 'paid' }, { id: 7, title: 'Instalment 7', meta: 'Paid 9 Sep · ••4821', amount: 14800, status: 'paid' }]} />
+    </Frame>
+    <Frame cap="RTL · StatusChip" dir="rtl">
+      <PaymentScheduleRow day="9" month="ديسمبر" title="القسط 10 من 18" detail="خصم تلقائي من ••4821" amount={14800} status="upcoming" statusLabel="قادم" />
+      <div style={{ display: 'flex', gap: '8px' }}><StatusChip status="paid" label="مدفوع" /><StatusChip status="overdue" label="متأخر" /><StatusChip status="upcoming" label="قادم" /></div>
+      <div dir="ltr" style={{ display: 'flex', gap: '8px' }}><StatusChip status="paid" /><StatusChip status="overdue" /><StatusChip status="upcoming" /></div>
+    </Frame>
+  </div>);
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+<script src="../../components/_preview.js"></script>
+</body></html>

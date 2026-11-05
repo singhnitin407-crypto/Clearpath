@@ -1,0 +1,40 @@
+:root {
+  --cp-space-4: 4px;
+  --cp-space-8: 8px;
+  --cp-space-12: 12px;
+  --cp-space-16: 16px;
+  --cp-space-20: 20px;
+  --cp-space-24: 24px;
+  --cp-space-32: 32px;
+  --cp-space-40: 40px;
+  --cp-space-56: 56px;
+
+  --cp-space-inline-start: var(--cp-space-16);
+  --cp-space-inline-end: var(--cp-space-16);
+  --cp-space-block-gap: var(--cp-space-16);
+  --cp-screen-gutter: var(--cp-space-16);
+
+  /* Shape */
+  --cp-radius-xs: 8px;
+  --cp-radius-sm: 12px;
+  --cp-radius-md: 18px;
+  --cp-radius-lg: 24px;
+  --cp-radius-pill: 999px;
+
+  /* Elevation — soft, never a hard edge */
+  --cp-shadow-card: 0 1px 2px rgba(22, 24, 29, 0.04), 0 6px 20px rgba(22, 24, 29, 0.05);
+  --cp-shadow-float: 0 12px 32px rgba(22, 24, 29, 0.22);
+
+  /* Touch */
+  --cp-touch-min: 44px;
+  --cp-touch-comfortable: 48px;
+
+  /* Motion */
+  --cp-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --cp-dur-fast: 120ms;
+  --cp-dur-base: 260ms;
+  --cp-dur-slow: 520ms;
+  /* iOS-style sheet: fast start, long soft settle */
+  --cp-ease-sheet: cubic-bezier(0.32, 0.72, 0, 1);
+  --cp-dur-sheet: 480ms;
+}

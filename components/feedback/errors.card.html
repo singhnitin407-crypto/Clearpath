@@ -1,0 +1,25 @@
+<!-- @dsCard group="Components" viewport="700x1180" name="Error states" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css"></head>
+<body style="margin:0;background:var(--cp-bg-page)"><div id="root"></div>
+<script type="text/x-cp">
+const Cell = ({ cap, children }) => (
+  <div style={{ width: '322px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+    <span style={{ fontSize: '11px', color: 'var(--cp-text-secondary)' }}>{cap}</span>
+    <div style={{ background: '#fff', borderRadius: '24px', padding: '12px 16px 16px', boxShadow: 'var(--cp-shadow-card)' }}>{children}</div>
+  </div>
+);
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', padding: '16px' }}>
+    <Cell cap="Transaction failed · danger"><ErrorState compact tone="danger" icon="circle-x" title="Payment didn't go through" details={[['Amount', <Money amount={14800} size="sm" />], ['Money debited', 'No']]} actionLabel="Try again" secondaryLabel="Use another account" code="Ref CP-PAY-58213">Your bank declined this payment. No money has left your account.</ErrorState></Cell>
+    <Cell cap="Status unknown / timeout · warning"><ErrorState compact tone="warning" icon="hourglass" title="We're confirming your payment" actionLabel="Check status" secondaryLabel="Done">Your bank is taking longer than usual. Please don't pay again, we'll notify you once it's confirmed.</ErrorState></Cell>
+    <Cell cap="Insufficient balance · warning"><ErrorState compact tone="warning" icon="wallet" title="Not enough balance" actionLabel="Use another account" secondaryLabel="Pay later">Current account ••4821 doesn't have enough funds for AED 14,800.</ErrorState></Cell>
+    <Cell cap="Face ID failed · info"><ErrorState compact tone="info" icon="scan-face" title="Face ID didn't match" actionLabel="Try Face ID again" secondaryLabel="Use passcode">For your security, we need to confirm it's you before paying.</ErrorState></Cell>
+    <Cell cap="No internet · neutral"><ErrorState compact tone="neutral" icon="wifi-off" title="No internet connection" actionLabel="Try again">Check your connection and try again. You haven't been charged.</ErrorState></Cell>
+    <Cell cap="Server error · neutral"><ErrorState compact tone="neutral" icon="server-crash" title="We can't load your loan right now" actionLabel="Try again" secondaryLabel="Contact support" code="Error 503">This is on our side. Nothing has changed on your loan.</ErrorState></Cell>
+    <Cell cap="Bank link failed · danger"><ErrorState compact tone="danger" icon="unlink" title="Couldn't link your account" actionLabel="Try again" secondaryLabel="Choose another bank">Your bank didn't confirm the connection. No account was added.</ErrorState></Cell>
+    <Cell cap="OfflineBar"><OfflineBar title="You're offline" label="Showing info from 9:41" actionLabel="Retry" /></Cell>
+  </div>
+);
+</script>
+<script src="../../components/_preview.js"></script>
+</body></html>

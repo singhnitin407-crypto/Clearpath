@@ -1,0 +1,28 @@
+:root {
+  /* Readex Pro covers Latin + Arabic in one family, so no RTL font swap is needed */
+  --cp-font-text: "Readex Pro", system-ui, sans-serif;
+  --cp-font-display: "Readex Pro", system-ui, sans-serif;
+  --cp-font-label: "Readex Pro", system-ui, sans-serif;
+  --cp-font-mono: "IBM Plex Mono", ui-monospace, monospace; /* references, codes only */
+
+  /* Mobile scale (375–390 px) */
+  --cp-size-figure-hero: 38px;
+  --cp-size-figure-xl: 28px;
+  --cp-size-figure-lg: 22px;
+  --cp-size-heading: 20px;
+  --cp-size-title: 17px;
+  --cp-size-body: 15px;
+  --cp-size-small: 13px;
+  --cp-size-caption: 12px;
+  --cp-size-label: 13px;
+
+  --cp-weight-regular: 400;
+  --cp-weight-medium: 500;
+  --cp-weight-semibold: 600;
+  --cp-weight-bold: 700;
+
+  --cp-leading-tight: 1.15;
+  --cp-leading-body: 1.5;
+  --cp-tracking-figure: -0.02em;
+  --cp-tracking-label: 0;
+}

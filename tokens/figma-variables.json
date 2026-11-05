@@ -1,0 +1,619 @@
+{
+  "$schema": "ClearPath Figma variables v1 — import with any Variables JSON importer; aliases reference Primitives",
+  "collections": {
+    "Primitives": {
+      "modes": [
+        "Value"
+      ],
+      "variables": {
+        "color/neutral/0": {
+          "type": "COLOR",
+          "value": "#ffffff"
+        },
+        "color/neutral/25": {
+          "type": "COLOR",
+          "value": "#f9f8f5"
+        },
+        "color/neutral/50": {
+          "type": "COLOR",
+          "value": "#f3f3ef"
+        },
+        "color/neutral/100": {
+          "type": "COLOR",
+          "value": "#ebebe6"
+        },
+        "color/neutral/200": {
+          "type": "COLOR",
+          "value": "#dedfd9"
+        },
+        "color/neutral/400": {
+          "type": "COLOR",
+          "value": "#a2a5ab"
+        },
+        "color/neutral/600": {
+          "type": "COLOR",
+          "value": "#62666f"
+        },
+        "color/neutral/800": {
+          "type": "COLOR",
+          "value": "#2a2d34"
+        },
+        "color/neutral/900": {
+          "type": "COLOR",
+          "value": "#16181d"
+        },
+        "color/sand/100": {
+          "type": "COLOR",
+          "value": "#efe8dc"
+        },
+        "color/teal/50": {
+          "type": "COLOR",
+          "value": "#e5f3f0"
+        },
+        "color/teal/300": {
+          "type": "COLOR",
+          "value": "#7fd8c6"
+        },
+        "color/teal/400": {
+          "type": "COLOR",
+          "value": "#4cc3ad"
+        },
+        "color/teal/600": {
+          "type": "COLOR",
+          "value": "#147a6e"
+        },
+        "color/teal/800": {
+          "type": "COLOR",
+          "value": "#0f4a44"
+        },
+        "color/teal/900": {
+          "type": "COLOR",
+          "value": "#0a332f"
+        },
+        "color/green/50": {
+          "type": "COLOR",
+          "value": "#e4f4e9"
+        },
+        "color/green/600": {
+          "type": "COLOR",
+          "value": "#17803f"
+        },
+        "color/red/50": {
+          "type": "COLOR",
+          "value": "#fdecea"
+        },
+        "color/red/600": {
+          "type": "COLOR",
+          "value": "#c4372d"
+        },
+        "color/red/800": {
+          "type": "COLOR",
+          "value": "#8a2620"
+        },
+        "color/amber/50": {
+          "type": "COLOR",
+          "value": "#fff3e0"
+        },
+        "color/amber/300": {
+          "type": "COLOR",
+          "value": "#ffd08a"
+        },
+        "color/amber/800": {
+          "type": "COLOR",
+          "value": "#7a4300"
+        },
+        "space/4": {
+          "type": "FLOAT",
+          "value": 4
+        },
+        "space/8": {
+          "type": "FLOAT",
+          "value": 8
+        },
+        "space/12": {
+          "type": "FLOAT",
+          "value": 12
+        },
+        "space/16": {
+          "type": "FLOAT",
+          "value": 16
+        },
+        "space/20": {
+          "type": "FLOAT",
+          "value": 20
+        },
+        "space/24": {
+          "type": "FLOAT",
+          "value": 24
+        },
+        "space/32": {
+          "type": "FLOAT",
+          "value": 32
+        },
+        "space/40": {
+          "type": "FLOAT",
+          "value": 40
+        },
+        "space/56": {
+          "type": "FLOAT",
+          "value": 56
+        },
+        "radius/xs": {
+          "type": "FLOAT",
+          "value": 8
+        },
+        "radius/sm": {
+          "type": "FLOAT",
+          "value": 12
+        },
+        "radius/md": {
+          "type": "FLOAT",
+          "value": 18
+        },
+        "radius/lg": {
+          "type": "FLOAT",
+          "value": 24
+        },
+        "radius/pill": {
+          "type": "FLOAT",
+          "value": 999
+        },
+        "size/touch-min": {
+          "type": "FLOAT",
+          "value": 44
+        },
+        "size/touch-comfortable": {
+          "type": "FLOAT",
+          "value": 48
+        },
+        "font-size/11": {
+          "type": "FLOAT",
+          "value": 11
+        },
+        "font-size/12": {
+          "type": "FLOAT",
+          "value": 12
+        },
+        "font-size/13": {
+          "type": "FLOAT",
+          "value": 13
+        },
+        "font-size/14": {
+          "type": "FLOAT",
+          "value": 14
+        },
+        "font-size/15": {
+          "type": "FLOAT",
+          "value": 15
+        },
+        "font-size/17": {
+          "type": "FLOAT",
+          "value": 17
+        },
+        "font-size/20": {
+          "type": "FLOAT",
+          "value": 20
+        },
+        "font-size/24": {
+          "type": "FLOAT",
+          "value": 24
+        },
+        "font-size/28": {
+          "type": "FLOAT",
+          "value": 28
+        },
+        "font-size/38": {
+          "type": "FLOAT",
+          "value": 38
+        },
+        "duration/fast": {
+          "type": "FLOAT",
+          "value": 120
+        },
+        "duration/base": {
+          "type": "FLOAT",
+          "value": 260
+        },
+        "duration/slow": {
+          "type": "FLOAT",
+          "value": 520
+        },
+        "duration/sheet": {
+          "type": "FLOAT",
+          "value": 480
+        }
+      }
+    },
+    "Semantic": {
+      "modes": [
+        "Light"
+      ],
+      "variables": {
+        "color/bg/page": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/neutral/50"
+          }
+        },
+        "color/bg/page-tint": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/sand/100"
+          }
+        },
+        "color/bg/surface": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/neutral/0"
+          }
+        },
+        "color/bg/sunken": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/neutral/100"
+          }
+        },
+        "color/bg/inverse": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/neutral/900"
+          }
+        },
+        "color/bg/hero": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/teal/800"
+          }
+        },
+        "color/bg/hero-deep": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/teal/900"
+          }
+        },
+        "color/bg/glass": {
+          "type": "COLOR",
+          "light": "rgba(255, 255, 255, 0.12)"
+        },
+        "color/text/primary": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/neutral/900"
+          }
+        },
+        "color/text/secondary": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/neutral/600"
+          }
+        },
+        "color/text/on-dark": {
+          "type": "COLOR",
+          "light": "#ffffff"
+        },
+        "color/text/on-dark-muted": {
+          "type": "COLOR",
+          "light": "rgba(255, 255, 255, 0.74)"
+        },
+        "color/text/link": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/teal/600"
+          }
+        },
+        "color/text/link-hover": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/teal/800"
+          }
+        },
+        "color/border/subtle": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/neutral/200"
+          }
+        },
+        "color/action/primary": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/neutral/900"
+          }
+        },
+        "color/action/primary-hover": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/neutral/800"
+          }
+        },
+        "color/action/primary-text": {
+          "type": "COLOR",
+          "light": "#ffffff"
+        },
+        "color/action/soft": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/neutral/100"
+          }
+        },
+        "color/action/soft-hover": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/neutral/200"
+          }
+        },
+        "color/action/accent": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/teal/300"
+          }
+        },
+        "color/action/accent-text": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/teal/900"
+          }
+        },
+        "color/money/saving": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/teal/600"
+          }
+        },
+        "color/money/in": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/green/600"
+          }
+        },
+        "color/money/out": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/red/600"
+          }
+        },
+        "color/status/paid": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/green/600"
+          }
+        },
+        "color/status/overdue": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/red/600"
+          }
+        },
+        "color/status/upcoming": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/neutral/600"
+          }
+        },
+        "color/status/upcoming-bg": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/neutral/100"
+          }
+        },
+        "color/alert/info-bg": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/neutral/0"
+          }
+        },
+        "color/alert/info-icon-bg": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/teal/50"
+          }
+        },
+        "color/alert/info-icon": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/teal/600"
+          }
+        },
+        "color/alert/warning-bg": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/amber/50"
+          }
+        },
+        "color/alert/warning-icon-bg": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/amber/300"
+          }
+        },
+        "color/alert/warning-icon": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/amber/800"
+          }
+        },
+        "color/alert/action-bg": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/red/50"
+          }
+        },
+        "color/alert/action-text": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/neutral/900"
+          }
+        },
+        "color/alert/action-body": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/red/800"
+          }
+        },
+        "color/alert/action-icon-bg": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/red/600"
+          }
+        },
+        "color/alert/action-icon": {
+          "type": "COLOR",
+          "light": "#ffffff"
+        },
+        "color/chart/bar": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/neutral/100"
+          }
+        },
+        "color/chart/bar-on-dark": {
+          "type": "COLOR",
+          "light": "rgba(255, 255, 255, 0.14)"
+        },
+        "color/chart/highlight": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/teal/600"
+          }
+        },
+        "color/chart/highlight-on-dark": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/teal/300"
+          }
+        },
+        "color/trend/good": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/green/600"
+          }
+        },
+        "color/trend/good-bg": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/green/50"
+          }
+        },
+        "color/trend/bad": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/red/600"
+          }
+        },
+        "color/trend/bad-bg": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/red/50"
+          }
+        },
+        "color/trend/neutral": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/neutral/600"
+          }
+        },
+        "color/trend/neutral-bg": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/neutral/100"
+          }
+        },
+        "color/focus/ring": {
+          "type": "COLOR",
+          "light": {
+            "alias": "color/teal/600"
+          }
+        }
+      }
+    },
+    "Typography": {
+      "modes": [
+        "EN",
+        "AR"
+      ],
+      "variables": {
+        "font/family/text": {
+          "type": "STRING",
+          "EN": "Readex Pro",
+          "AR": "Readex Pro"
+        },
+        "font/family/mono": {
+          "type": "STRING",
+          "EN": "IBM Plex Mono",
+          "AR": "IBM Plex Mono"
+        },
+        "font/tracking/figure": {
+          "type": "FLOAT",
+          "EN": -0.02,
+          "AR": -0.02
+        },
+        "font/tracking/label": {
+          "type": "FLOAT",
+          "EN": 0,
+          "AR": 0
+        },
+        "font/line-height/tight": {
+          "type": "FLOAT",
+          "EN": 1.15,
+          "AR": 1.3
+        },
+        "font/line-height/body": {
+          "type": "FLOAT",
+          "EN": 1.5,
+          "AR": 1.7
+        }
+      }
+    },
+    "Layout": {
+      "modes": [
+        "Mobile"
+      ],
+      "variables": {
+        "layout/screen-gutter": {
+          "type": "FLOAT",
+          "alias": "space/16"
+        },
+        "layout/section-gap": {
+          "type": "FLOAT",
+          "alias": "space/20"
+        },
+        "layout/card-padding": {
+          "type": "FLOAT",
+          "alias": "space/16"
+        },
+        "layout/stack-gap": {
+          "type": "FLOAT",
+          "alias": "space/8"
+        },
+        "layout/frame-width": {
+          "type": "FLOAT",
+          "value": 390
+        },
+        "layout/frame-width-min": {
+          "type": "FLOAT",
+          "value": 375
+        }
+      }
+    }
+  },
+  "textStyles": {
+    "Figure/Hero": "Readex Pro 700 · 38/1.1 · -2%",
+    "Figure/XL": "Readex Pro 700 · 28/1.1 · -2%",
+    "Figure/LG": "Readex Pro 600 · 22/1.1",
+    "Figure/MD": "Readex Pro 600 · 16/1.1",
+    "Heading/H1": "Readex Pro 600 · 24/1.2",
+    "Heading/H2": "Readex Pro 600 · 18/1.25",
+    "Heading/Title": "Readex Pro 600 · 17/1.3",
+    "Body/MD": "Readex Pro 400 · 15/1.5",
+    "Body/MD Strong": "Readex Pro 500 · 15/1.3",
+    "Body/SM": "Readex Pro 400 · 14/1.5",
+    "Label/MD": "Readex Pro 400 · 13/1.4",
+    "Caption": "Readex Pro 400 · 12/1.4",
+    "Micro": "Readex Pro 500 · 11/1.2",
+    "Code": "IBM Plex Mono 400 · 13/1.4"
+  },
+  "effectStyles": {
+    "Elevation/Card": "0 1 2 rgba(22,24,29,.04) + 0 6 20 rgba(22,24,29,.05)",
+    "Elevation/Float": "0 12 32 rgba(22,24,29,.22)",
+    "Elevation/Sheet": "0 -12 40 rgba(22,24,29,.18)"
+  }
+}
